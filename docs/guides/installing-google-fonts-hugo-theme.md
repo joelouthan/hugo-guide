@@ -31,26 +31,29 @@ Let's get started.
 
 # Instructions
 
-1/. Edit the head.html file and place the following snippet within the head tag. (Note: For our example, head.html was located in the themes/cupper/layout/partials directory)
-```
+1\. Edit the head.html file and place the following snippet within the head tag. (Note: For our example, head.html was located in the themes/cupper/layout/partials directory)
+
+{% raw %}
 <head>
    {{ partial "google-fonts" . }}
 </head>
-```
+{% endraw %}
 > **TIP**: Do not place this snippet within the meta tag.
 
-2/. Edit the config.toml file and place the google_fonts line underneath the params tag. (Note: this file is located within the webroot directory):
-```
+2\. Edit the config.toml file and place the google_fonts line underneath the params tag. (Note: this file is located within the webroot directory):
+
+{% raw %}
    [params]
    google_fonts = [
      ["Cinzel", "100, 200, 300, 400, 500, 600, 700, 800, 900"]
    ]
-```
+{% endraw %}
 
 > **NOTE**: 100-900 are the various weights–100 being the thinnest and 900 being the boldest.
 
-3/. Create the file: webroot/themes/theme-name/layouts/partials/google-fonts.html and add the following to this file:
-```
+3\. Create the file: webroot/themes/theme-name/layouts/partials/google-fonts.html and add the following to this file:
+
+{% raw %}
    {{ if .Site.Params.google_fonts }}
      {{ $fonts := slice }}
      {{ range .Site.Params.google_fonts }}
@@ -65,10 +68,11 @@ Let's get started.
      <!-- specify a default in case custom config not present -->
      <link href="//fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
    {{ end }}
-```
+{% endraw %}
 
-4/. Edit your site's css file. (For this example, I wanted to alter the library-desc property.)
-```
+4\. Edit your site's css file. (For this example, I wanted to alter the library-desc property.)
+
+```css
    .library-desc {
        font-size: 0.60rem;
        font-weight: 100;
@@ -80,9 +84,9 @@ Let's get started.
    }
 ```
 
-5/. **For local hugo server**: Stop and restart hugo server
+5\. **For local hugo server**: Stop and restart hugo server
 
-6/. Deploy into production
+6\. Deploy into production
 
 # Verification
 
