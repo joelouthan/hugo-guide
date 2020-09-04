@@ -34,19 +34,23 @@ Let's get started.
 1\. Edit the head.html file and place the following snippet within the head tag. (Note: For our example, head.html was located in the themes/cupper/layout/partials directory)
 
 {% raw %}
+```html
 <head>
    {{ partial "google-fonts" . }}
 </head>
+```
 {% endraw %}
 > **TIP**: Do not place this snippet within the meta tag.
 
 2\. Edit the config.toml file and place the google_fonts line underneath the params tag. (Note: this file is located within the webroot directory):
 
 {% raw %}
+```toml
    [params]
    google_fonts = [
      ["Cinzel", "100, 200, 300, 400, 500, 600, 700, 800, 900"]
    ]
+```
 {% endraw %}
 
 > **NOTE**: 100-900 are the various weights–100 being the thinnest and 900 being the boldest.
@@ -54,6 +58,7 @@ Let's get started.
 3\. Create the file: webroot/themes/theme-name/layouts/partials/google-fonts.html and add the following to this file:
 
 {% raw %}
+```html
    {{ if .Site.Params.google_fonts }}
      {{ $fonts := slice }}
      {{ range .Site.Params.google_fonts }}
@@ -68,6 +73,7 @@ Let's get started.
      <!-- specify a default in case custom config not present -->
      <link href="//fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
    {{ end }}
+```
 {% endraw %}
 
 4\. Edit your site's css file. (For this example, I wanted to alter the library-desc property.)
