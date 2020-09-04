@@ -1,2 +1,3 @@
-# hugo-guide
-Guides for installing and running Hugo, a static site generator
+# Hugo
+
+A comprehensive collection of Hugo (static site generator) guides
