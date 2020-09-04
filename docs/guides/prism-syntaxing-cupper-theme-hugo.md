@@ -20,14 +20,14 @@ Let's get started.
 |**ruby**   |2.6.2   |
 |**node**   |v10.22.0   |
 |**npm**   |v6.14.6   |
-|**cupper**   |[Source](https://github.com/zwbetz-gh/cupper-hugo-theme)   |
+|**Cupper**   |[Source](https://github.com/zwbetz-gh/cupper-hugo-theme)   |
 |**hosting**   |[netlify](https://www.netlify.com)/build 3.3.5  |
 
 # Prerequisites
 
 1. hugo server is running
 2. Site is live and running
-3. For this example, we are using the [cupper theme](https://github.com/zwbetz-gh/cupper-hugo-theme)
+3. For this example, we are using the [Cupper theme](https://github.com/zwbetz-gh/cupper-hugo-theme)
 
 # Instructions
 
